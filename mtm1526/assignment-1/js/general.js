@@ -5,7 +5,6 @@ alert('This is a little message');
 
 var letterLooper = function () {
 	var input = '';
-	//var letter = '';
 	var alpha =/^[a-zA-Z]+$/;
 	
 	while ((!input) || (!(input.match(alpha))) || (!(input.length==1)) ) {
