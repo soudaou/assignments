@@ -34,6 +34,17 @@ $number2 = 0;
 $function = '+';
 $answer = 0;
 
+if (isset($_POST['number1'])) {
+  $number1 = $_POST['number1'];
+}
+
+if (isset($_POST['number2'])) {
+  $number2 = $_POST['number2'];
+}
+
+if (isset($_POST['function'])) {
+  $function = $_POST['function'];
+
 			switch ($_POST['function']){
 		case '+':
 			$answer = $number1 + $number2;
@@ -47,7 +58,10 @@ $answer = 0;
 		case '*':
 			$answer = $number1 * $number2;
 			break;
-	}
+			}
+}
+	$total = $answer * 1.13;
+
 	?>
 
 </body>
