@@ -41,6 +41,7 @@ if (isset($_POST['function'])) {
 </head>
 
 <body>
+	<h1>Money calculator with tax</h1>
 	<form method="post" action="index.php">
 		<label for="number1">Number 1</label>
 		<input type="number"input id="number1" name="number1">
