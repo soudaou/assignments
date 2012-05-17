@@ -26,6 +26,8 @@ var_dump($_POST);
 		</select>
 		
 		<button>Calculate</button>
+		
+		<strong>$<?php echo number_format($total, 2); ?></strong>
 	</form>
 			<?php
 			
