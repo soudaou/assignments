@@ -8,8 +8,11 @@ html{
 }
 
 
-
+h1{
+	font-size:2em;
+	font:"Century Gothic";
+}
 form{
-	
+	width: 50%;
 }
 
