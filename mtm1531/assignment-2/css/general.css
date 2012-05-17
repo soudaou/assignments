@@ -5,14 +5,16 @@ html{
 	margin: 0, auto;
 	padding:0;
 	color:#FFFFFF;
+	text-align:center;
 }
 
-
 h1{
+	
 	font-size:2em;
 	font:"Century Gothic";
 }
 form{
-	width: 50%;
+	margin: 0, auto;
+	padding:0;
 }
 
