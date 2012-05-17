@@ -41,7 +41,6 @@ if (isset($_POST['function'])) {
 </head>
 
 <body>
-	<?php if ($_SERVER['REQUEST_METHOD'] == 'GET') : ?>
 	<form method="post" action="index.php">
 		<label for="number1">Number 1</label>
 		<input type="number"input id="number1" name="number1">
