@@ -28,6 +28,12 @@ var_dump($_POST);
 		<button>Calculate</button>
 	</form>
 			<?php
+			
+$number1 = 0;
+$number2 = 0;
+$function = '+';
+$answer = 0;
+
 			switch ($_POST['function']){
 		case '+':
 			$answer = $number1 + $number2;
