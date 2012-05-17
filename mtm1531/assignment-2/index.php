@@ -11,21 +11,21 @@ var_dump($_POST);
 <body>
 	<?php if ($_SERVER['REQUEST_METHOD'] == 'GET') : ?>
 	<form method="post" action="index.php">
-		<label for="number-one">Number 1</label>
-		<input id="number-one" name="number-one">
+		<label for="number1">Number 1</label>
+		<input type="number"input id="number1" name="number1">
 		
-		<label for="number-two">Number 2</label>
-		<input id="number-two" name="number-two">
+		<label for="number2">Number 2</label>
+		<input type="number" input id="number2" name="number2">
 		
 		<label for="function">Function</label>
 		<select id="function" name="function">
-			<option value="plus">+</option>
-			<option value="minus">-</option>
-			<option value="divide">/</option>
-			<option value="multiply">*</option>
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="/">/</option>
+			<option value="*">*</option>
 		</select>
 		
-		<button type="calculate">Calculate</button>
+		<button>Calculate</button>
 	</form>
 		<?php else : ?>
 			<?php
