@@ -15,20 +15,20 @@ if (isset($_POST['number2'])) {
 if (isset($_POST['function'])) {
   $function = $_POST['function'];
 
-			switch ($_POST['function']){
-		case '+':
-			$answer = $number1 + $number2;
-			break;
-		case '-':
-			$answer = $number1 - $number2;
-			break;
-		case '/':
-			$answer = $number1 / $number2;
-			break;
-		case '*':
-			$answer = $number1 * $number2;
-			break;
-			}
+		switch ($_POST['function']){
+	case '+':
+		$answer = $number1 + $number2;
+		break;
+	case '-':
+		$answer = $number1 - $number2;
+		break;
+	case '/':
+		$answer = $number1 / $number2;
+		break;
+	case '*':
+		$answer = $number1 * $number2;
+		break;
+		}
 }
 	$total = $answer * 1.13;
 
