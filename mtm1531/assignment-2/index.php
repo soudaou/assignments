@@ -27,7 +27,6 @@ var_dump($_POST);
 		
 		<button>Calculate</button>
 	</form>
-		<?php else : ?>
 			<?php
 			switch ($_POST['function']){
 				case plus :
@@ -55,7 +54,6 @@ var_dump($_POST);
 				break;
 			}
 	?>
-	<?php endif; ?>
 
 </body>
 </html>
