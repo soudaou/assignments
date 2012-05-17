@@ -29,30 +29,19 @@ var_dump($_POST);
 	</form>
 			<?php
 			switch ($_POST['function']){
-				case plus :
-				?>
-					<h1><?php  echo $_POST['dino-name']; ?> sucks!</h1>
-				<?php
-				break;
-				
-				case minus :
-				?>
-					<h1><?php  echo $_POST['dino-name']; ?> are ok!</h1>
-				<?php
-				break;
-				
-				case divide :
-				?>
-					<h1><?php  echo $_POST['dino-name']; ?> are amaze-a-zing!</h1>
-				<?php
-				break;
-				
-				case multiply :
-				?>
-					<h1><?php  echo $_POST['dino-name']; ?> are amaze-a-zing!</h1>
-				<?php
-				break;
-			}
+		case '+':
+			$answer = $number1 + $number2;
+			break;
+		case '-':
+			$answer = $number1 - $number2;
+			break;
+		case '/':
+			$answer = $number1 / $number2;
+			break;
+		case '*':
+			$answer = $number1 * $number2;
+			break;
+	}
 	?>
 
 </body>
