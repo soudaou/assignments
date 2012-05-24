@@ -24,3 +24,9 @@ todolist.addEventListener('click', function (ev) {
 	}
 }, false);
 
+//unchecking the added item
+todolist.addEventListener('click', function (ev) {
+	if (ev.target.className == 'undeleted') {
+		ev.target.className = '';
+	} 
+}, true);
