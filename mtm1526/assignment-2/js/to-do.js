@@ -14,3 +14,13 @@ myform.addEventListener('submit', function (ev) {
 
 	additem.value = '';
 }, false);
+
+//checking the added item
+todolist.addEventListener('click', function (ev) {
+	if (ev.target.className == 'deleted') {
+		ev.target.className = '';
+	} else {
+		ev.target.className = 'deleted';
+	}
+}, false);
+
