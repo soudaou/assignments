@@ -26,17 +26,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 //to validate the username
 	if (strlen($username) < 1 || strlen($username) > 25)
     $errors['username'] = true;
-
 	
-//to validate the radio
-	if (!in_array($preferredlang, array('english', 'french', 'spanish')))
-    $errors['preferredlang'] = true;
 	
-//to validate the message
-	//if (!isset($_POST['notes'])){
-	//	$errors['notes'] = true;
-	//}
+//to validate the language
+	//if (!in_array($preferredlang, array('english', 'french', 'spanish')))
+   // $errors['preferredlang'] = true;
+   if ($preferredlang != 'english' || $preferredlang != 'french' || $preferredlang != 'spanish'){
+		$errors['preferredlang'] = true;
+	}
 	
+//to validate the notes
 	if (mb_strlen($notes) < 5 || mb_strlen($notes) > 100 ){
 		$errors['notes'] = true;
 	}
@@ -46,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$errors['terms'] = true;
 	}
 	
+//to validate the message
 	if (empty($errors)) {
     $thank_you = true;
 	mail($email, 'Thank you for registering','daou0092@algonquinlive.com');
