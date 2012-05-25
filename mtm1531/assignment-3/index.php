@@ -65,13 +65,13 @@ require_once 'includes/form-processor.php';
             	<strong class="error">Choose a preferred language.</strong> 
 				<?php endif; ?>
             </legend>
-            <input type="radio" id="english" name="preferredlang" value="en" <?php if ($preferredlang == 'english') { echo ' checked'; } ?>>
+            <input type="radio" id="english" name="preferredlang" value="english" <?php if ($preferredlang == 'english') { echo ' checked'; } ?>>
             <label for="english">English</label>
                 
-            <input type="radio" id="french" name="preferredlang" value="fr" <?php if ($preferredlang == 'french') { echo ' checked'; } ?>>
+            <input type="radio" id="french" name="preferredlang" value="french" <?php if ($preferredlang == 'french') { echo ' checked'; } ?>>
             <label for="french">French</label>
                 
-            <input type="radio" id="spanish" name="preferredlang" value="sp" <?php if ($preferredlang == 'spanish') { echo ' checked'; } ?>>
+            <input type="radio" id="spanish" name="preferredlang" value="spanish" <?php if ($preferredlang == 'spanish') { echo ' checked'; } ?>>
             <label for="spanish">Spanish</label>
         </fieldset>
 
