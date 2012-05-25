@@ -55,19 +55,29 @@ require_once 'includes/form-processor.php';
         </div>
         
         <fieldset>
-            	<legend>
-                Preferred Language: </legend>
+            <legend>
+            	Preferred Language: 
+            </legend>
+            <input type="radio" id="english" name="lang" value="english">
+            <label for="english">English</label>
                 
-                <input type="radio" id="english" name="lang" value="english">
-                <label for="english">English</label>
+            <input type="radio" id="french" name="lang" value="french">
+            <label for="french">French</label>
                 
-                <input type="radio" id="french" name="lang" value="french">
-                <label for="french">French</label>
-                
-                <input type="radio" id="spanish" name="lang" value="spanish">
-                <label for="spanish">Spanish</label>
-            </fieldset>
+            <input type="radio" id="spanish" name="lang" value="spanish">
+            <label for="spanish">Spanish</label>
+        </fieldset>
 
+		<div>
+            <label for="notes">
+            	Notes
+            	<?php if (isset($errors['notes'])): ?> 
+            	<strong class="error">must be between 5 and 100 characters</strong> 
+				<?php endif; ?>
+            </label>
+            <textarea id="notes" name="notes"><?php echo $notes; ?></textarea>
+            <p>5 to 100 characters long.</p>
+        </div>
 
         <button types="submit">Send</button>
     </form>
