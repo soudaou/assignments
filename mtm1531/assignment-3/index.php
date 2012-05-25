@@ -57,6 +57,9 @@ require_once 'includes/form-processor.php';
         <fieldset>
             <legend>
             	Preferred Language: 
+                <?php if (isset($errors['lang'])): ?> 
+            	<strong class="error">Choose a preferred language.</strong> 
+				<?php endif; ?>
             </legend>
             <input type="radio" id="english" name="lang" value="english">
             <label for="english">English</label>
@@ -79,6 +82,16 @@ require_once 'includes/form-processor.php';
             <p>5 to 100 characters long.</p>
         </div>
 
+		<div>
+        	<input type="checkbox" id="terms" name="terms" vale="1">
+            <label for="terms">
+            	Accept terms?
+            	<?php if (isset($errors['terms'])): ?> 
+            	<strong class="error">You must comply!</strong> 
+				<?php endif; ?>
+            </label>
+        </div>
+        
         <button types="submit">Send</button>
     </form>
 
