@@ -11,7 +11,7 @@ require_once 'includes/form-processor.php';
 </head>
 
 <body>
-
+	<h1>Fill this Registration Form:</h1>
 	<form method="post" action="index.php">
     	<div>
             <label for="name">
@@ -23,7 +23,7 @@ require_once 'includes/form-processor.php';
             <input id="name" name="name" required value="<?php echo $name; ?>">
         </div>
         
-        
+        <button types="submit">Send</button>
     </form>
 
 
