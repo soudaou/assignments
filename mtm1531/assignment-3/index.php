@@ -54,6 +54,21 @@ require_once 'includes/form-processor.php';
             <input id="password" name="password" required value="<?php echo $password; ?>">
         </div>
         
+        <fieldset>
+            	<legend>
+                Preferred Language: </legend>
+                
+                <input type="radio" id="english" name="lang" value="english">
+                <label for="english">English</label>
+                
+                <input type="radio" id="french" name="lang" value="french">
+                <label for="french">French</label>
+                
+                <input type="radio" id="spanish" name="lang" value="spanish">
+                <label for="spanish">Spanish</label>
+            </fieldset>
+
+
         <button types="submit">Send</button>
     </form>
 
