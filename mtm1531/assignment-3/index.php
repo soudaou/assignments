@@ -44,6 +44,16 @@ require_once 'includes/form-processor.php';
             <p>max length 25 characters.</p>
         </div>
         
+        <div>
+            <label for="password">
+            	Password 
+				<?php if (isset($errors['password'])): ?> 
+            	<strong class="error">is required</strong> 
+				<?php endif; ?>
+            </label>
+            <input id="password" name="password" required value="<?php echo $password; ?>">
+        </div>
+        
         <button types="submit">Send</button>
     </form>
 
