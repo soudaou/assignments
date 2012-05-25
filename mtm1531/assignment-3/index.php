@@ -12,9 +12,11 @@ require_once 'includes/form-processor.php';
 
 <body>
 	<h1>Fill this Registration Form:</h1>
-	<?php if ($display_thanks) : ?>
-	<strong>Thanks for registering.</strong>
+    
+    <?php if ($thank_you) : ?>
+	<strong>Thank you for registering.</strong>
 	<?php else : ?>
+    
 	<form method="post" action="index.php">
     	<div>
             <label for="name">
@@ -64,13 +66,13 @@ require_once 'includes/form-processor.php';
             	<strong class="error">Choose a preferred language.</strong> 
 				<?php endif; ?>
             </legend>
-            <input type="radio" id="english" name="lang" value="en"<?php if ($preferredlang == 'en') { echo ' checked'; } ?>>
+            <input type="radio" id="english" name="lang" value="en"<?php if ($preferredlang == 'english') { echo ' checked'; } ?>>
             <label for="english">English</label>
                 
-            <input type="radio" id="french" name="lang" value="fr"<?php if ($preferredlang == 'fr') { echo ' checked'; } ?>>
+            <input type="radio" id="french" name="lang" value="fr"<?php if ($preferredlang == 'french') { echo ' checked'; } ?>>
             <label for="french">French</label>
                 
-            <input type="radio" id="spanish" name="lang" value="sp"<?php if ($preferredlang == 'sp') { echo ' checked'; } ?>>
+            <input type="radio" id="spanish" name="lang" value="sp"<?php if ($preferredlang == 'spanish') { echo ' checked'; } ?>>
             <label for="spanish">Spanish</label>
         </fieldset>
 
@@ -82,8 +84,7 @@ require_once 'includes/form-processor.php';
   		</div>
 
 		<div>
-        	<input type="checkbox" id="terms" name="terms" vale="1">
-            <?php if (isset($_POST['terms'])) { echo ' checked'; } ?>>
+        	<input type="checkbox" id="terms" name="terms" vale="1" <?php if (isset($_POST['terms'])) { echo ' checked'; } ?>>
             <label for="terms">
             	Accept terms?
             	<?php if (isset($errors['terms'])): ?> 
@@ -92,9 +93,8 @@ require_once 'includes/form-processor.php';
             </label>
         </div>
 
-        <button types="submit">Send</button>
+        <button types="submit">Sign Up</button>
     </form>
-    <?php endif; ?>
-
+	<?php endif; ?>
 </body>
 </html>
