@@ -12,6 +12,9 @@ require_once 'includes/form-processor.php';
 
 <body>
 	<h1>Fill this Registration Form:</h1>
+	<?php if ($display_thanks) : ?>
+	<strong>Thanks for registering.</strong>
+	<?php else : ?>
 	<form method="post" action="index.php">
     	<div>
             <label for="name">
@@ -57,7 +60,7 @@ require_once 'includes/form-processor.php';
         <fieldset>
             <legend>
             	Preferred Language: 
-                <?php if (isset($errors['lang'])): ?> 
+                <?php if (isset($errors['preferredlang'])): ?> 
             	<strong class="error">Choose a preferred language.</strong> 
 				<?php endif; ?>
             </legend>
@@ -72,18 +75,15 @@ require_once 'includes/form-processor.php';
         </fieldset>
 
 		<div>
-            <label for="notes">
+    		<label for="notes">
             	Notes
-            	<?php if (isset($errors['notes'])): ?> 
-            	<strong class="error">must be between 5 and 100 characters</strong> 
-				<?php endif; ?>
             </label>
-            <textarea id="notes" name="notes"><?php echo $notes; ?></textarea>
-            <p>5 to 100 characters long.</p>
-        </div>
+   			 <textarea id="notes" name="notes"><?php echo $notes; ?></textarea>
+  		</div>
 
 		<div>
         	<input type="checkbox" id="terms" name="terms" vale="1">
+            <?php if (isset($_POST['terms'])) { echo ' checked'; } ?>>
             <label for="terms">
             	Accept terms?
             	<?php if (isset($errors['terms'])): ?> 
@@ -91,10 +91,10 @@ require_once 'includes/form-processor.php';
 				<?php endif; ?>
             </label>
         </div>
-        
+
         <button types="submit">Send</button>
     </form>
-
+    <?php endif; ?>
 
 </body>
 </html>
