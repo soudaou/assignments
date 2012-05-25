@@ -1,4 +1,6 @@
 <?php
+
+$thank_you = false;
 $errors = array();
 
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
@@ -22,14 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 
 //to validate the username
-	if (empty($username)) {
-		$errors['username'] = true;
-	}
+	if (strlen($username) < 1 || strlen($username) > 25)
+    $errors['username'] = true;
+
 	
 //to validate the radio
-if ($preferredlang != 'spanish' || $preferredlang != 'french' || $preferredlang != 'english'){
-		$errors['lang'] = true;
-	}
+	if (!in_array($preferredlang, array('english', 'french', 'spanish')))
+    $errors['preferredlang'] = true;
 	
 //to validate the message
 	//if (!isset($_POST['notes'])){
@@ -46,7 +47,7 @@ if ($preferredlang != 'spanish' || $preferredlang != 'french' || $preferredlang 
 	}
 	
 	if (empty($errors)) {
-    $display_thanks = true;
+    $thank_you = true;
     mail($email, 'Thank you for registering');
   }
 }
