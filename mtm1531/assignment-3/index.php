@@ -13,7 +13,17 @@ require_once 'includes/form-processor.php';
 <body>
 
 	<form method="post" action="index.php">
-    
+    	<div>
+            <label for="name">
+            	Name 
+				<?php if (isset($errors['name'])): ?> 
+            	<strong class="error">is required</strong> 
+				<?php endif; ?>
+            </label>
+            <input id="name" name="name" required value="<?php echo $name; ?>">
+        </div>
+        
+        
     </form>
 
 
