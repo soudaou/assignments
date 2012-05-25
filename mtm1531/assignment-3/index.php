@@ -23,6 +23,16 @@ require_once 'includes/form-processor.php';
             <input id="name" name="name" required value="<?php echo $name; ?>">
         </div>
         
+         <div>
+            <label for="email">
+            	Email 
+				<?php if (isset($errors['email'])): ?> 
+            	<strong class="error">is required</strong> 
+				<?php endif; ?>
+            </label>
+            <input id="email" name="email" required value="<?php echo $email; ?>">
+        </div>
+        
         <button types="submit">Send</button>
     </form>
 
