@@ -1,3 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+html{
+	margin:0 auto;
+	padding:0;
+	width:80%;
+	background-color:#999;
+}
