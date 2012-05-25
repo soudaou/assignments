@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	if (empty($errors)) {
     $thank_you = true;
-    mail($email, 'Thank you for registering');
+	mail($email, 'Thank you for registering','daou0092@algonquinlive.com');
   }
+  
 }
