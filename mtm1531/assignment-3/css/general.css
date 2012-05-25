@@ -6,4 +6,12 @@ html{
 	padding:0;
 	width:80%;
 	background-color:#999;
+	font-family:"Century Gothic";
+}
+
+label{
+	display:block;
+}	
+.error{
+	color:#C00;
 }
