@@ -5,7 +5,7 @@ $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW);
-$lang = filter_input(INPUT_POST, 'lang', FILTER_SANITIZE_STRING);
+$preferredlang = filter_input(INPUT_POST, 'preferredlang', FILTER_SANITIZE_STRING);
 $notes = filter_input(INPUT_POST, 'notes', FILTER_SANITIZE_STRING);
 
 /*Validation*/
@@ -27,11 +27,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 	
 //to validate the radio
-if ($lang != 'spanish' || $lang != 'french' || $lang != 'english'){
+if ($preferredlang != 'spanish' || $preferredlang != 'french' || $preferredlang != 'english'){
 		$errors['lang'] = true;
 	}
 	
 //to validate the message
+	//if (!isset($_POST['notes'])){
+	//	$errors['notes'] = true;
+	//}
+	
 	if (mb_strlen($notes) < 5 || mb_strlen($notes) > 100 ){
 		$errors['notes'] = true;
 	}
@@ -40,4 +44,9 @@ if ($lang != 'spanish' || $lang != 'french' || $lang != 'english'){
 	if (!isset($_POST['terms'])){
 		$errors['terms'] = true;
 	}
+	
+	if (empty($errors)) {
+    $display_thanks = true;
+    mail($email, 'Thank you for registering');
+  }
 }
