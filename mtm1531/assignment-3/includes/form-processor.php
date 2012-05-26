@@ -1,6 +1,6 @@
 <?php
 
-$thank_you = false;
+$thanks = false;
 $errors = array();
 
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 //to validate the message
 	if (empty($errors)) {
-    $thank_you = true;
+    $thanks = true;
 	mail($email, 'Thank you for registering','daou0092@algonquinlive.com');
   }
   
