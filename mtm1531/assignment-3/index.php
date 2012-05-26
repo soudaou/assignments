@@ -13,7 +13,7 @@ require_once 'includes/form-processor.php';
 <body>
 	<h1>Fill this Registration Form:</h1>
     
-    <?php if ($thank_you) : ?>
+    <?php if ($thanks) : ?>
 	<strong>Thank you for registering.</strong>
 	<?php else : ?>
 	<form method="post" action="index.php">
