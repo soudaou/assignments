@@ -11,11 +11,12 @@ require_once 'includes/form-processor.php';
 </head>
 
 <body>
-	<h1>Fill this Registration Form:</h1>
-    
-    <?php if ($thanks) : ?>
+ <?php if ($thanks) : ?>
 	<strong>Thank you for registering.</strong>
 	<?php else : ?>
+	<h1>Fill this Registration Form:</h1>
+    
+   
 	<form method="post" action="index.php">
     	<div>
             <label for="name">
