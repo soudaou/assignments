@@ -9,6 +9,10 @@ $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW);
 $preferredlang = filter_input(INPUT_POST, 'preferredlang', FILTER_SANITIZE_STRING);
 $notes = filter_input(INPUT_POST, 'notes', FILTER_SANITIZE_STRING);
+$souad = 'Souad Daou';
+$email = 'daou0092@algonquinlive.com';
+$subject = 'Registration form';
+$message = 'Thank you for registering';
 
 /*Validation*/
 
@@ -29,11 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	
 //to validate the language
-	//if (!in_array($preferredlang, array('english', 'french', 'spanish')))
-   // $errors['preferredlang'] = true;
-   if ($preferredlang != 'english' || $preferredlang != 'french' || $preferredlang != 'spanish'){
-		$errors['preferredlang'] = true;
-	}
+	if (!in_array($preferredlang, array('english', 'french', 'spanish')))
+   $errors['preferredlang'] = true;
+   //if ($preferredlang != 'english' || $preferredlang != 'french' || $preferredlang != 'spanish'){
+	//	$errors['preferredlang'] = true;
+	//}
 	
 //to validate the notes
 	if (mb_strlen($notes) < 5 || mb_strlen($notes) > 100 ){
@@ -47,8 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 //to validate the message
 	if (empty($errors)) {
+		echo 'Thank you for registering';
     $thanks = true;
-	mail($email, 'Thank you for registering','daou0092@algonquinlive.com');
+	$headers = 'From: ' . $souad . '<' . $email . '>';
+	mail($email, $message, $subject, $headers);
   }
   
 }
