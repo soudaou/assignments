@@ -20,7 +20,7 @@ require_once 'includes/form-processor.php';
 	<form method="post" action="index.php">
     	<div>
             <label for="name">
-            	Name 
+            	<strong>Name </strong>
 				<?php if (isset($errors['name'])): ?> 
             	<strong class="error">is required</strong> 
 				<?php endif; ?>
@@ -30,7 +30,7 @@ require_once 'includes/form-processor.php';
         
          <div>
             <label for="email">
-            	Email 
+            	<strong>Email </strong>
 				<?php if (isset($errors['email'])): ?> 
             	<strong class="error">is required</strong> 
 				<?php endif; ?>
@@ -40,7 +40,7 @@ require_once 'includes/form-processor.php';
         
         <div>
             <label for="username">
-            	Username 
+            	<strong>Username </strong>
 				<?php if (isset($errors['username'])): ?> 
             	<strong class="error">username is required</strong> 
 				<?php endif; ?>
@@ -51,7 +51,7 @@ require_once 'includes/form-processor.php';
         
         <div>
             <label for="password">
-            	Password 
+            	<strong>Password </strong>
 				<?php if (isset($errors['password'])): ?> 
             	<strong class="error">is required</strong> 
 				<?php endif; ?>
@@ -61,7 +61,7 @@ require_once 'includes/form-processor.php';
         
         <fieldset>
             <legend>
-            	Preferred Language: 
+            	<strong>Preferred Language: </strong>
                 <?php if (isset($errors['preferredlang'])): ?> 
             	<strong class="error">Choose a preferred language.</strong> 
 				<?php endif; ?>
@@ -77,14 +77,14 @@ require_once 'includes/form-processor.php';
         </fieldset>
 
 		<div>
-    		<label for="notes">Notes</label>
+    		<label for="notes"><strong>Notes</strong></label>
    			 <textarea id="notes" name="notes"><?php echo $notes; ?></textarea>
   		</div>
         
 		<div>
         	<input type="checkbox" id="terms" name="terms" vale="1" <?php if (isset($_POST['terms'])) { echo ' checked'; } ?>>
             <label for="terms">
-            	Accept terms?
+            	<strong>Accept terms?</strong>
             	<?php if (isset($errors['terms'])): ?> 
             	<strong class="error">You must comply!</strong> 
 				<?php endif; ?>
