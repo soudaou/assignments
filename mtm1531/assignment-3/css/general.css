@@ -8,7 +8,14 @@ html{
 	background-color:#999;
 	font-family:"Century Gothic";
 }
-
+h1{
+	text-align:center;
+}
+form{
+	margin:0 auto;
+	padding:8px;
+	background-color:#CCCCCC;
+}
 label{
 	display:block;
 }	
