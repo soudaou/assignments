@@ -76,12 +76,10 @@ require_once 'includes/form-processor.php';
         </fieldset>
 
 		<div>
-    		<label for="notes">
-            	Notes
-            </label>
+    		<label for="notes">Notes</label>
    			 <textarea id="notes" name="notes"><?php echo $notes; ?></textarea>
   		</div>
-
+        
 		<div>
         	<input type="checkbox" id="terms" name="terms" vale="1" <?php if (isset($_POST['terms'])) { echo ' checked'; } ?>>
             <label for="terms">
