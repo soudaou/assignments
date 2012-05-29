@@ -1,32 +1,33 @@
 $(document).ready(function() {
 	
 	var circleHidden = false;
-	var property = $('#property');
-	var color = $('#color-box').val();
-	
+
 	$('form').on('submit', function (ev) {
 		ev.preventDefault();
+		
+		var property = $('#property');
+		var color = $('#color-box').val();
 
 		switch ($('#property').val()){
-	case 'border-color':
-		$('.acircle').css('border-color', color);
-		break;
-	case 'background-color':
-		$('.acircle').css('background-color', color);
-		break;
-	case 'color':
-		$('.acircle').css('color', color);
-		break;
+			case 'border-color':
+				$('.acircle').css('border-color', color);
+			break;
+			case 'background-color':
+				$('.acircle').css('background-color', color);
+			break;
+			case 'color':
+				$('.acircle').css('color', color);
+			break;
 		}
 	});
 		
-	$('#hide-show').on('click', function (ev) {
+	$('#hide-show').on('click', function () {
 		if (circleHidden == false) {
-			$('.acircle').fadeOut(200);
+			$('.acircle').hide().fadeOut(200);
 			circleHidden = true;
 		}
 		else{
-			$('.acircle').fadeIn(200);
+			$('.acircle').hide().fadeIn(200);
 			circleHidden = false;
 		}
 	});
