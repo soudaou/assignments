@@ -17,8 +17,8 @@ div{
 	top: 200px;
 	-moz-transition: all 250ms linear;
 	text-align:center;
-	font-size: 1.5em;
+	font-size: 6em;
 	vertical-align:200px;
 	border:8px solid #333;
-	line-height:200px;
+	line-height:180px;
 }
