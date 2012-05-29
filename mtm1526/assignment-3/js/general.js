@@ -22,11 +22,11 @@ $(document).ready(function() {
 		
 	$('#hide-show').on('click', function (ev) {
 		if (circleHidden == false) {
-			$('.acircle').hide().fadeOut(200);
+			$('.acircle').fadeOut(200);
 			circleHidden = true;
 		}
 		else{
-			$('.acircle').hide().fadeIn(100);
+			$('.acircle').fadeIn(200);
 			circleHidden = false;
 		}
 	});
