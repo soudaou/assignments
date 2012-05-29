@@ -1,13 +1,12 @@
-//var isHidden = false;
-
 $(document).ready(function() {
+	
+	var circleHidden = false;
+	var property = $('#property');
+	var color = $('#color-box').val();
 	
 	$('form').on('submit', function (ev) {
 		ev.preventDefault();
-		
-		var property;
-		var color = $('#color-box').val();
-		
+
 		switch ($('#property').val()){
 	case 'border-color':
 		$('.acircle').css('border-color', color);
@@ -19,9 +18,17 @@ $(document).ready(function() {
 		$('.acircle').css('color', color);
 		break;
 		}
-		$('#hide-show').on('click', function() {
-			
-		});
-	
 	});
-})
+		
+	$('#hide-show').on('click', function (ev) {
+		if (circleHidden == false) {
+			$('.acircle').hide().fadeOut(200);
+			circleHidden = true;
+		}
+		else{
+			$('.acircle').hide().fadeIn(100);
+			circleHidden = false;
+		}
+	});
+
+});
