@@ -1,7 +1,6 @@
 //var isHidden = false;
 
 $(document).ready(function() {
-	console.log("ready play around");
 	
 	$('form').on('submit', function (ev) {
 		ev.preventDefault();
