@@ -22,14 +22,18 @@ $(document).ready(function() {
 	});
 		
 	$('#hide-show').on('click', function () {
-		if (circleHidden == false) {
 			$('.acircle').hide().fadeOut(200);
-			circleHidden = true;
-		}
-		else{
-			$('.acircle').hide().fadeIn(200);
-			circleHidden = false;
-		}
 	});
 
 });
+
+//$('#hide-show').on('click', function () {
+//		if (circleHidden == false) {
+//			$('.acircle').hide().fadeOut(200);
+//			circleHidden = true;
+//		}
+//		else{
+//			$('.acircle').hide().fadeIn(200);
+//			circleHidden = false;
+//		}
+//	});
