@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	
+	var $circle = $('.acircle')
 	var circleHidden = false;
 
 	$('form').on('submit', function (ev) {
@@ -22,18 +23,6 @@ $(document).ready(function() {
 	});
 		
 	$('#hide-show').on('click', function () {
-			$('.acircle').hide().fadeOut(200);
+			$circle.toggle(200);
 	});
-
 });
-
-//$('#hide-show').on('click', function () {
-//		if (circleHidden == false) {
-//			$('.acircle').hide().fadeOut(200);
-//			circleHidden = true;
-//		}
-//		else{
-//			$('.acircle').hide().fadeIn(200);
-//			circleHidden = false;
-//		}
-//	});
