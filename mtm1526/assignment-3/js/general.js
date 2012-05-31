@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	
 	var $circle = $('.acircle')
-	var circleHidden = false;
 
 	$('form').on('submit', function (ev) {
 		ev.preventDefault();
