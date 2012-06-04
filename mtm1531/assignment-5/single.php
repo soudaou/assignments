@@ -1,8 +1,8 @@
 <?php
 
 require_once 'includes/db.php';
-$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 $sql = $db->prepare('
 	SELECT id, movie_title, release_date, director
