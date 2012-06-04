@@ -1,3 +1,29 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*index.php*/
+
+html{
+	margin:0 auto;
+	padding:0;
+	width:50em;
+	background-color:#666666;
+	font-family:"Century Gothic";
+	
+}
+h1{
+	text-align:center;
+	color:#F90;
+	font-size:4em;
+}
+dl{
+	color:#Fff;
+}
+
+
+/*single.php*/
+#single{
+	background-color:#666666;
+	color:#F90;
+}
+
