@@ -22,15 +22,16 @@ $results = $sql->fetch();
 </head>
 
 <body>
-	<h1> <?php echo $results['movie_title']; ?></h1>
-	<dl>
-		<dt> Release Date </dt>
-		<dd><?php echo $results['release_date']; ?></dd>
-		<dt> Director </dt>
-		<dd><?php echo $results['director']; ?></dd>
-	</dl>
-	
-	<a href="delete.php?id=<?php echo $id; ?>"> Delete </a>
+	<div id="single">
+		<h1> <?php echo $results['movie_title']; ?></h1>
+		<dl>
+			<dt> Release Date </dt>
+			<dd><?php echo $results['release_date']; ?></dd>
+			<dt> Director </dt>
+			<dd><?php echo $results['director']; ?></dd>
+		</dl>
+		<a href="delete.php?id=<?php echo $id; ?>"> Delete </a>
+	</div>
 	
 </body>
 </html>
