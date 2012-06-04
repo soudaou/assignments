@@ -10,7 +10,7 @@ if (empty($id)) {
 }
 
 $sql = $db->prepare('
-	DELETE FROM dinosaurs
+	DELETE FROM movies
 	WHERE id = :id
 ');
 
