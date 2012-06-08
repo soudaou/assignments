@@ -7,25 +7,22 @@ html{
 	margin:0 auto;
 	padding:0;
 	width:50em;
-	
+	background-color:#333333;
 	font-family:"Century Gothic";
-	background: url(../images/camera.gif) no-repeat top left;
+	background:#333 url(../images/camera.gif) no-repeat top left;
 	background-size:50%;
 }
 h1{
-	text-align:center;
-	color:#F90;
+	text-align:right;
+	padding-left:4em;
+	color:#Fff;
 	font-size:4em;
-	padding-bottom:3em;
+	line-height:300px;
+	width:100%;
 }
 dl{
-	color:#333;
+	color:#fff;
 }
-
-
-/*single.php*/
-#single{
-	background-color:#666666;
-	color:#F90;
+a{
+	color:#FF6600;
 }
-
