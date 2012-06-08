@@ -9,7 +9,8 @@ html{
 	width:50em;
 	background-color:#666666;
 	font-family:"Century Gothic";
-	
+	background:#996 url(../images/camera.jpg) no-repeat left;
+	background-size:50%;
 }
 h1{
 	text-align:center;
