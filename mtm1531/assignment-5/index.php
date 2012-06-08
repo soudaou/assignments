@@ -21,7 +21,7 @@ $results = $sql->fetchALL();
 </head>
 
 <body>
-	<h1>Movies of the year</h1>
+	<h1>Movies of the year!</h1>
 	<?php foreach ($results as $movie) : ?>
 	<h2>
 		<a href="single.php?id=<?php echo $movie['id']; ?>">
