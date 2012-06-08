@@ -7,19 +7,19 @@ html{
 	margin:0 auto;
 	padding:0;
 	width:50em;
-	background-color:#333;
+	
 	font-family:"Century Gothic";
-	/*background: url(../images/camera.gif) no-repeat top left;*/
-	/*background-size:50%;*/
+	background: url(../images/camera.gif) no-repeat top left;
+	background-size:50%;
 }
 h1{
 	text-align:center;
 	color:#F90;
 	font-size:4em;
+	padding-bottom:3em;
 }
 dl{
-	
-	color:#fff;
+	color:#333;
 }
 
 
