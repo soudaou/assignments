@@ -22,7 +22,7 @@ $results = $sql->fetchALL();
 
 <body>
 	<h1>Movies of the year!</h1>
-	<a href="add.php"> Add a Dinosaur </a>
+	<a href="add.php"> Add a Movie </a>
 	
 	<?php foreach ($results as $movie) : ?>
 	<h2>
