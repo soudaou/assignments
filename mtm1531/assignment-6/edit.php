@@ -12,9 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (strlen($movie_title) < 1 || strlen($movie_title) > 256) {
 		$errors['movie_title'] = true;
 	}
-	//if (!in_array($loves_meat, array(0,1))) {
-		//$errors['loves_meat'] = true;
-	//}
+	if (strlen($release_date) < 1 || strlen($release_date) > 256) {
+		echo date_format($release_date, 'Y-m-d H:i:s');
+		$errors['release_date'] = true;
+	}
 	if (empty($errors)) {
 		//we are opening the connection here because this is where we want to start using it
 		//we had this here then moved it     require_once 'includes/db.php';
@@ -96,7 +97,7 @@ else{
 			<input id="director" name="director" required value=" <?php echo $director; ?> ">
 		</div>
 		
-		<button type="submit"> Add </button>
+		<button type="submit"> Save </button>
 		
 	</form>
 
