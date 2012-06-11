@@ -17,9 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$errors['release_date'] = true;
 	}
 	if (empty($errors)) {
-		//we are opening the connection here because this is where we want to start using it
-		//we had this here then moved it     require_once 'includes/db.php';
-		
+
 		$sql = $db->prepare('
 			UPDATE movies
 			SET movie_title = :movie_title
@@ -27,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					,director = :director
 					WHERE id = :id
 		');
-		// security issues PDO::
 		$sql->bindValue(':id', $id, PDO::PARAM_INT);
 		$sql->bindValue(':movie_title', $movie_title, PDO::PARAM_STR);
 		$sql->bindValue(':release_date', $release_date, PDO::PARAM_INT);
@@ -53,7 +50,6 @@ else{
 	$director = $results['director'];
 }
 
-//var_dump($sql->errorInfo());
 
 ?><!DOCTYPE HTML>
 <html>
