@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<strong class="errors"> is required </strong>
 			<?php endif; ?>
 			</label>
-			<input id="movie_title" name="movie_title" required value=" <?php echo $movie_title; ?> ">
+			<input id="movie_title" name="movie_title" required value="<?php echo $movie_title; ?>">
 		</div>
 		
 		<div>
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<strong class="errors"> is required </strong>
 			<?php endif; ?>
 			</label>
-			<input id="release_date" name="release_date"  value=" <?php echo $release_date; ?> ">
+			<input id="release_date" name="release_date"  value="<?php echo $release_date; ?>">
 		</div>
 		
 		<div>
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<strong class="errors"> is required </strong>
 			<?php endif; ?>
 			</label>
-			<input id="director" name="director" required value=" <?php echo $director; ?> ">
+			<input id="director" name="director" required value="<?php echo $director; ?>">
 		</div>
 		
 		<button type="submit"> Add </button>
