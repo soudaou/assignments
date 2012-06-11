@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*index.php*/
+
+html{
+	margin:0 auto;
+	padding:0;
+	width:50em;
+	background-color:#333333;
+	font-family:"Century Gothic";
+	background:#333 url(../images/camera.gif) no-repeat top left;
+	background-size:50%;
+}
+h1{
+	text-align:right;
+	padding-left:4em;
+	color:#Fff;
+	font-size:4em;
+	line-height:300px;
+	width:100%;
+}
+dl{
+	color:#fff;
+}
+a{
+	color:#FF6600;
+}
