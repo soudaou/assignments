@@ -6,7 +6,7 @@ $dino_name = filter_input(INPUT_POST, 'dino_name', FILTER_SANITIZE_STRING);
 $loves_meat = filter_input(INPUT_POST, 'loves_meat', FILTER_SANITIZE_NUMBER_INT);
 $in_jurassic_park = (isset($_POST['in_jurassic_park'])) ? 1 : 0;
 
-if ($_SERVER['REQUEST_METHOD'] == 'post') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (strlen($dino_name) < 1 || strlen($dino_name) > 256) {
 		$errors['dino_name'] = true;
 	}
@@ -14,7 +14,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
 		$errors['loves_meat'] = true;
 	}
 	if (empty($errors)) {
-		//Do DB stuff
+		//we are opening the connection here because this is where we want to start using it
+		require_once 'includes/db.php';
+		
+		$sql = $db->prepare('
+			INSERT INTO dinosaurs (dino_name, loves_meat, in_jurassic_park)
+			VALUES (:dino_name, :loves_meat, :in_jurassic_park)
+		');
+		// security issues PDO::
+		$sql->bindValue(':dino_name', $dino_name, PDO::PARAM_STR);
+		$sql->bindValue(':loves_meat', $loves_meat, PDO::PARAM_INT);
+		$sql->bindValue(':in_jurassic_park', $in_jurassic_park, PDO::PARAM_INT);
+		$sql->execute();
+		
+		header('Location: index.php');
+		exit;
 	}
 }
 
