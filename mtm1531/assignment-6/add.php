@@ -18,14 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$errors['director'] = true;
 	}
 	if (empty($errors)) {
-		//we are opening the connection here because this is where we want to start using it
+		
 		require_once 'includes/db.php';
 		
 		$sql = $db->prepare('
 			INSERT INTO movies (movie_title, release_date, director)
 			VALUES (:movie_title, :release_date, :director)
 		');
-		// security issues PDO::
 		$sql->bindValue(':movie_title', $movie_title, PDO::PARAM_STR);
 		$sql->bindValue(':release_date', $release_date, PDO::PARAM_INT);
 		$sql->bindValue(':director', $director, PDO::PARAM_STR);
