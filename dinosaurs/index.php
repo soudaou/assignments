@@ -22,7 +22,9 @@ $results = $sql->fetchALL();
 </head>
 
 <body>
-	<h1>Movies of the year</h1>
+	
+	<a href="add.php"> add a Dinosaur </a>
+	
 	<?php foreach ($results as $dino) : ?>
 	<h2>
 		<a href="single.php?id=<?php echo $dino['id']; ?>">
