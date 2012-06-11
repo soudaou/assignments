@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		exit;
 	}
 }
+//var_dump($sql->errorInfo());
 
 ?><!DOCTYPE HTML>
 <html>
