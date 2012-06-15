@@ -31,9 +31,9 @@ $results = $sql->fetchALL();
 		</a>
 	</h2>
 	<dl>
-		<dt>Release Date</dt>
+		<dt><strong>Release Date</strong></dt>
 		<dd><?php echo $movie['release_date']; ?></dd>
-		<dt>Director</dt>
+		<dt><strong>Director</strong></dt>
 		<dd><?php echo $movie['director']; ?></dd>
 	</dl>
 	<?php endforeach ?>
