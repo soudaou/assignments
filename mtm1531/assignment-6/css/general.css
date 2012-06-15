@@ -17,8 +17,11 @@ h1{
 	padding-left:4em;
 	color:#Fff;
 	font-size:4em;
-	line-height:300px;
-	width:100%;
+/*	line-height:300px;
+*/	width:100%;
+}
+#movieinfo{
+	padding-top:15em;
 }
 dl{
 	color:#fff;
@@ -26,6 +29,7 @@ dl{
 a{
 	color:#FF6600;
 }
+
 
 /*single.php*/
 
