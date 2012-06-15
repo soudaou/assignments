@@ -22,21 +22,23 @@ $results = $sql->fetchALL();
 
 <body>
 	<h1>Movies of the year!</h1>
-	<a href="add.php"> Add a Movie </a>
 	
-	<?php foreach ($results as $movie) : ?>
-	<h2>
-		<a href="single.php?id=<?php echo $movie['id']; ?>">
-		<?php echo $movie['movie_title']; ?>
-		</a>
-	</h2>
-	<dl>
-		<dt><strong>Release Date</strong></dt>
-		<dd><?php echo $movie['release_date']; ?></dd>
-		<dt><strong>Director</strong></dt>
-		<dd><?php echo $movie['director']; ?></dd>
-	</dl>
-	<?php endforeach ?>
+	<div id="movieinfo">
+		<a href="add.php"> Add a Movie </a>
+		<?php foreach ($results as $movie) : ?>
+		<h2>
+			<a href="single.php?id=<?php echo $movie['id']; ?>">
+			<?php echo $movie['movie_title']; ?>
+			</a>
+		</h2>
+		<dl>
+			<dt><strong>Release Date</strong></dt>
+			<dd><?php echo $movie['release_date']; ?></dd>
+			<dt><strong>Director</strong></dt>
+			<dd><?php echo $movie['director']; ?></dd>
+		</dl>
+		<?php endforeach ?>
+	</div>
 	
 </body>
 </html>
