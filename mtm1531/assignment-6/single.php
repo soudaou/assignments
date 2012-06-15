@@ -19,6 +19,8 @@ $results = $sql->fetch();
 <head>
 	<meta charset="utf-8">
 	<title><?php echo $results['movie_title']; ?> &middot; Movies</title>
+	<link href="css/general.css" rel="stylesheet">
+
 </head>
 
 <body>
