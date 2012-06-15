@@ -31,6 +31,17 @@ a{
 
 html{
 	background-color:#333333;
-
+}
+h3{
+	margin:0, auto;
+	padding-top: 10em;
+	color:#FF6600;
+	font-size:36px;
+}
+dt{
+	font-size:1.1em;
+}
+dd{
+	margin:0;
 }
 
