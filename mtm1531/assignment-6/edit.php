@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$sql->bindValue(':id', $id, PDO::PARAM_INT);
 		$sql->bindValue(':movie_title', $movie_title, PDO::PARAM_STR);
 		$sql->bindValue(':release_date', $release_date, PDO::PARAM_INT);
-		$sql->bindValue(':director', $director, PDO::PARAM_INT);
+		$sql->bindValue(':director', $director, PDO::PARAM_STR);
 		$sql->execute();
 		
 		header('Location: index.php');
