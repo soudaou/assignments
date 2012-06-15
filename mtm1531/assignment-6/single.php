@@ -25,15 +25,16 @@ $results = $sql->fetch();
 
 <body>
 	<div id="single">
-		<h1> <?php echo $results['movie_title']; ?></h1>
+		<h3> <?php echo $results['movie_title']; ?></h3>
 		<dl>
-			<dt> Release Date </dt>
+			<dt> <strong>Release Date</strong> </dt>
 			<dd><?php echo $results['release_date']; ?></dd>
-			<dt> Director </dt>
+			<dt><strong> Director </strong></dt>
 			<dd><?php echo $results['director']; ?></dd>
 		</dl>
 		
 		<a href="edit.php?id=<?php echo $id; ?>"> Edit </a>
+		
 		<a href="delete.php?id=<?php echo $id; ?>"> Delete </a>
 	</div>
 	
