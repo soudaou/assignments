@@ -24,6 +24,8 @@ $results = $sql->fetch();
 </head>
 
 <body>
+	<h1>Movies of the year!</h1>
+
 	<div id="single">
 		<h3> <?php echo $results['movie_title']; ?></h3>
 		<dl>
