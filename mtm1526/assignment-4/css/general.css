@@ -1,8 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 html{
-	background-color:#ccc;
+	background-color:#FFE6F2;
 	font: normal 100%/1.5 san-serif;
+	font-family:"Century Gothic";
+	color:#663300;
 }
 body{
 	margin:0 auto;
@@ -23,17 +25,33 @@ nav a:link,
 nav a:visited{
 	display:inline-block;
 	border-radius: 4px 4px 0 0;
-	background-color: #e2e2e2;
+	background-color:#FFC6E2;
 	padding:0.5em 1em;
 	text-decoration:none;
-	color:#000;
+	color:#FFF;
 }
 nav .current a,
 nav .current a:link,
 nav .current a:visited{
 	background-color:#fff;
 }
-article{
-	background-color:#fff;
+/*.info{
+	background-color:#FFC6E2;
+	border-radius: 0 4px 0 0;
 	padding:1em;
+}*/
+
+/*cupcake pages*/
+article{
+	background-color:#FFC6E2;
+	border-radius: 0 4px 0 0;
+	padding:1em;
+}
+
+h1{
+	font-size:25px;
+}
+
+p{
+	font-size:18px;
 }
