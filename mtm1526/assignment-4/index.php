@@ -9,10 +9,11 @@
 <body>
 	<nav>
 		<ul id="cupcakes" >
-				<li><a href="coconut-cupcake.html" class="selected" rel="#default">Coconut</a></li>
-				<li><a href="vanilla-cupcake.html" rel="">Vanilla</a></li>
-				<li><a href="raspberry-cupcake.html" rel="">Raspberry</a></li>
-</ul>
+				<li><a href="coconut.html" class="selected" rel="#default">Coconut</a></li>
+				<li><a href="vanilla.html" rel="">Vanilla</a></li>
+				<li><a href="raspberry.html" rel="">Raspberry</a></li>
+				<li><a href="lemon.html" rel="">Raspberry</a></li>
+		</ul>
 	</nav>
 
 </body>
