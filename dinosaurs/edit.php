@@ -1,8 +1,10 @@
 <?php
 require_once 'includes/users.php';
 
+$_SESSION['referrer']= $_SERVER['REQUEST_URI'];
+
 if (!user_is_signed_in()) {
-	header('location:sign-in.php');
+	header('Location:sign-in.php');
 	exit();
 }
 
