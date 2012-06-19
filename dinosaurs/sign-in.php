@@ -2,7 +2,7 @@
 require_once 'includes/users.php';
 require_once 'includes/db.php';
 
-$error = array();
+$errors = array();
 
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW);
@@ -15,7 +15,16 @@ if ($_SERVER['REQUEST_METHOD'] =='POST') {
 		$errors['password'] = true;
 	}
 	if (empty($errors)) {
-		
+		$user_id = user_get($db, $username, $password);
+		if ($user_id) {
+			user_sign_in($user_id);
+			header('Location: ' . $_SESSION['referrer']);
+			exit;
+			//redirect back to the page they came from
+		} 
+		else {
+			$errors['no-user'] = true;
+		}
 	}
 }
 
