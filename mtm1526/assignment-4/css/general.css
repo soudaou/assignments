@@ -45,6 +45,9 @@ nav .current a:visited{
 }*/
 
 /*cupcake pages*/
+html{
+	text-align:center;
+}
 article{
 	background-color:#FFDFEF;
 	border-radius: 0 4px 0 0;
