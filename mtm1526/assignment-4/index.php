@@ -9,7 +9,7 @@
 <body>
 	<nav>
 		<ul id="cupcakes" >
-				<li><a id="coconut" rel="#default"><strong>Coconut</strong></a></li>
+				<li class="current"><a id="coconut" rel="#default"><strong>Coconut</strong></a></li>
 				<li><a id="vanilla" rel=""><strong>Vanilla</strong></a></li>
 				<li><a id="raspberry" rel=""><strong>Raspberry</strong></a></li>
 				<li><a id="lemon" rel=""><strong>Lemon</strong></a></li>
