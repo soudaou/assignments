@@ -1,19 +1,21 @@
 @charset "utf-8";
 /* CSS Document */
 html{
-	background-color:#FFDFEF;
-	font: normal 100%/1.5 san-serif;
+	background-color:#FFF;
 	font-family:"Century Gothic";
 	color:#663300;
-	background: url(../images/pink-bars.gif) repeat-x 20%;
+	background: url(../images/pink-bars.gif) repeat-x 20em;
 }
 body{
 	margin:0 auto;
-	padding-top:4em;
-	width:30em;
+	width:100%;
 	
 }
-
+#logo{
+	margin:0 auto;
+	padding:0;
+	text-align:center;
+}
 nav ul{
 	margin:0;
 	padding:0;
@@ -30,16 +32,16 @@ nav a:link,
 nav a:visited{
 	display:inline-block;
 	border-radius: 4px 4px 0 0;
-	background-color:#FFDFEF;
+	background-color:#fff;
 	padding:0.5em 1em;
 	text-decoration:none;
-	color:#FFF;
+	color:#FFDFEF;
 }
 nav .current a,
 nav .current a:link,
 nav .current a:visited{
-	background-color:#fff;
-	color:##663300;
+	background-color:#FFDFEF;
+	color:#663300;
 }
 
 
