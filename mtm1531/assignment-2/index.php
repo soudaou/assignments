@@ -42,25 +42,27 @@ if (isset($_POST['function'])) {
 
 <body>
 	<h1>Money calculator with tax</h1>
-	<form method="post" action="index.php">
-		<label for="number1">Number 1</label>
-		<input type="number"input id="number1" name="number1">
-		
-		<label for="number2">Number 2</label>
-		<input type="number" input id="number2" name="number2">
-		
-		<label for="function">Function</label>
-		<select id="function" name="function">
-			<option value="+">+</option>
-			<option value="-">-</option>
-			<option value="/">/</option>
-			<option value="*">*</option>
-		</select>
-		
-		<button>Calculate</button>
-		
-		<strong>$<?php echo number_format($total, 2); ?></strong>
-	</form>
+	<div id="cal-box">
+		<form method="post" action="index.php">
+			<label for="number1">Number 1</label>
+			<input type="number"input id="number1" name="number1">
+			
+			<label for="number2">Number 2</label>
+			<input type="number" input id="number2" name="number2">
+			
+			<label for="function">Function</label>
+			<select id="function" name="function">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="/">/</option>
+				<option value="*">*</option>
+			</select>
+			
+			<button>Calculate</button>
+			
+			<strong>$<?php echo number_format($total, 2); ?></strong>
+		</form>
+	</div>
 
 
 </body>
