@@ -3,14 +3,25 @@
 
 html{
 	margin:0 auto;
-	padding:0;
-	width:50%;
+	padding-top:5em;
+	width:20em;
 	font-family:"Century Gothic";
 	background-color:#CCF;
 }
 
 h1{
-	text-align:left;	
+	text-transform:uppercase;
+}
+#box{
+	margin:0 auto;
+	padding:1em 1em 1em 1em;
+	border-radius: 6px 6px 6px 6px;
+	text-align:center;
+	background-color:#FFF;
+}
+
+p{
+	text-align:left;
 }
 
 li {
@@ -21,4 +32,9 @@ li {
 .deleted {
 	color: #999;
 	text-decoration: line-through;
+}
+
+#todolist{
+	text-align:left;
+	color:#CC0000;
 }
