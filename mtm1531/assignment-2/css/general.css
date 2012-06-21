@@ -1,16 +1,28 @@
 @charset "utf-8";
 /* CSS Document */
 html{
-	background-color:#CC0000;
+	background-color:#333;
 	margin: 0, auto;
 	padding:0;
-	color:#FFFFFF;
+	color:#000;
 	text-align:center;
 }
 
 h1{	
 	font-size:2em;
 	font:"Century Gothic";
+	text-transform:uppercase;
+	color:#FFF;
 }
 
+#cal-box{
+	margin:0 auto;
+	padding:1em 1em 1em 1em;
+	border-radius: 6px 6px 6px 6px;
+	text-align:center;
+	background-color:#999999;
+}
 
+input{
+	border-radius: 6px 6px 6px 6px;
+}
