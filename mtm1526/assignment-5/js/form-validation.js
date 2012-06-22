@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	
 	var userAvailable = $('.user-available');
-	// This variable is for the password requirements
+	var cityAvailable = $('.city-available');
 	var passwordReqs = 0;
 	
 	$('#username').on('change', function (ev) {
@@ -84,6 +84,49 @@ $(document).ready(function () {
 	});
 	
 });
+
+//$('#city').on('change', function (ev) {
+	$('#city').on('keyup', function (ev) {
+		var city = $(this).val();
+		/*console.log('username');*/
+		
+		var city = $(this).val();
+		
+		// if user tyes 3 or more it will go back to unchecked
+		cityAvailable.attr('data-status', 'unchecked');
+		
+		//length constriction//
+		
+		if (city.match(/[a-z]/)) {
+			$('.cityAvailable').attr('data-state', 'achieved');
+		}
+		if (city.match(/[A-Z]/)) {
+			$('.cityAvailable').attr('data-state', 'achieved');
+		}
+		//if (city.length >=3 && city.length <=25) {	
+//		
+//			var ajax = $.post('check-username.php', {
+//				'city' : city
+//			});
+		
+			//ajax.done(function (data) {
+//				if (data == 'available') {
+//					cityAvailable
+//						.attr('data-status', 'available')
+//						.html('Available');
+//				}
+//				else {
+//					cityAvailable
+//						.attr('data-status', 'unavailable')
+//						.html('unavailable');
+//				}
+//			});
+		//}
+		// If the user types less than 3, the unavailable will show up
+		//else{
+			//cityAvailable.attr('data-status', 'unavailable').html('Unavailable');
+		//}
+	});
 
 
 
