@@ -12,11 +12,16 @@
 		<div>
 			<label for="username">Username</label>
 			<input id="username" name="username" required>
-		
 			<strong class="user-available" data-status="unchecked"> <!--    The "data-" does exist in html5 and you can add anything after the " - "     -->
 				Available
 			</strong>
 		</div>
+		
+		<div>
+			<label for="email">Email</label>
+			<input id="email" name="email" required>
+		</div>
+		
 		<div>
 			<label for="password">Password</label>
 			<input type="password" id="password" name="password" required>
@@ -29,6 +34,23 @@
 				<li class="pass-symbol"> 1 symbol </li>
 			</ul>
 		</div>
+		
+		<div>
+			<label for="city">City</label>
+			<input id="city" name="city" required>
+			<strong class="city-available" data-status="unchecked"> <!--    The "data-" does exist in html5 and you can add anything after the " - "     -->
+				Available
+			</strong>
+		</div>
+		
+		<fieldset>
+            <legend>Country</legend>
+            <input type="radio" id="canada" name="canada">
+            <label for="canada">Canada</label>
+                
+            <input type="radio" id="us" name="us">
+            <label for="us">US</label>
+        </fieldset>
 		
 		<button type="submit">Submit</button>
 	</form>
