@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*User Available*/
 .user-available {
 	font-size: 1.123em;
 }
@@ -24,7 +25,7 @@
 	content: "✖";
 }
 
-
+/*Password Available*/
 .pass-reqs {
 	list-style:none;
 }
@@ -36,4 +37,28 @@
 .pass-reqs li[data-state="achieved"]:before {
 	color:#090;
 	content: "✔";
+}
+
+/*City Available*/
+.city-available {
+	font-size: 1.123em;
+}
+
+.city-available:before {
+	content: "✔";			/*go to copypaste.com and paste the check mark*/
+}
+
+.city-available[data-status="unchecked"] {
+	display:none;
+}
+.city-available[data-status="available"] {
+	color:#090;
+}
+
+.city-available[data-status="unavailable"] {
+	color:#f33;
+}
+
+.city-available[data-status="unavailable"]:before {
+	content: "✖";
 }
