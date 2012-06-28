@@ -7,7 +7,7 @@
 }
 
 .user-available:before {
-	content: "✔";			/*go to copypaste.com and paste the check mark*/
+	content: "✔";
 }
 
 .user-available[data-status="unchecked"] {
@@ -38,6 +38,32 @@
 	color:#090;
 	content: "✔";
 }
+
+/*email Available*/
+
+.email-available {
+	font-size: 1.123em;
+}
+
+.email-available:before {
+	content: "✔";
+}
+
+.email-available[data-status="unchecked"] {
+	display:none;
+}
+.email-available[data-status="available"] {
+	color:#090;
+}
+
+.email-available[data-status="unavailable"] {
+	color:#f33;
+}
+
+.email-available[data-status="unavailable"]:before {
+	content: "✖";
+}
+
 
 /*City Available*/
 .city-available {
