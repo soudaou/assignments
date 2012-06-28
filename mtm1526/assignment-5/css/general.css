@@ -40,12 +40,12 @@
 }
 
 /*City Available*/
-/*.city-available {
+.city-available {
 	font-size: 1.123em;
 }
 
 .city-available:before {
-	content: "✔";			/*go to copypaste.com and paste the check mark
+	content: "✔";
 }
 
 .city-available[data-status="unchecked"] {
@@ -61,4 +61,4 @@
 
 .city-available[data-status="unavailable"]:before {
 	content: "✖";
-}*/
+}
