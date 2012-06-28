@@ -1,8 +1,10 @@
 $(document).ready(function () {
 	
 	var userAvailable = $('.user-available');
+	var emailAvailable = $('.email-available');
 	var cityAvailable = $('.city-available');
 	var passwordReqs = 0;
+	var cityReqs = 0;
 	
 $('#username').on('change', function (ev) {
 		
@@ -71,20 +73,6 @@ $('#password').on('keyup', function (ev) {
 			$('.pass-symbol').attr('data-state', 'achieved');
 		}
 	});
-	
-	// You want to prevent the user from clicking on submit before filling out all the requirements
-	$('form').on('submit', function (ev) {
-		if (
-			userAvailable.attr('data-status') == 'unchecked'
-			|| userAvailable.attr('data-status') == 'unavailable'
-			|| passwordReq < 5
-		) {
-			ev.preventDefault();
-		}
-	});
-	
-});
-
 
 $('#email').on('change', function (ev) {
 		
@@ -93,10 +81,10 @@ $('#email').on('change', function (ev) {
 		var email = $(this).val();
 		
 		// if user tyes 3 or more it will go back to unchecked
-		userAvailable.attr('data-status', 'unchecked');
+		emailAvailable.attr('data-status', 'unchecked');
 		
 		//length constriction
-		if (email. length >=3 && email.length <=25) {	
+		if (email.length >=3 && email.length <=25) {	
 		
 			var ajax = $.post('check-email.php', {
 				'email' : email
@@ -104,12 +92,12 @@ $('#email').on('change', function (ev) {
 		
 			ajax.done(function (data) {
 				if (data == 'available') {
-					userAvailable
+					emailAvailable
 						.attr('data-status', 'available')
 						.html('Available');
 				}
 				else {
-					userAvailable
+					emailAvailable
 						.attr('data-status', 'unavailable')
 						.html('unavailable');
 				}
@@ -117,25 +105,55 @@ $('#email').on('change', function (ev) {
 		}
 		// If the user types less than 3, the unavailable will show up
 		else{
-			userAvailable.attr('data-status', 'unavailable').html('Unavailable');
+			emailAvailable.attr('data-status', 'unavailable').html('Unavailable');
 		}
-	});
-	
-	
+});
 	
 $('#city').on('keyup', function (ev) {
+	
 		var city = $(this).val();
-		/*console.log('username');*/
-		// if user tyes 3 or more it will go back to unchecked
-		cityAvailable.attr('data-status', 'unchecked');
-		
-		//length constriction//
-		
-		if (city.match(/[a-z]/)) {
-			$('.cityAvailable').attr('data-state', 'achieved');
+		cityReqs = 0; 
+		if (city.length >=0 && city.length <=50 && city.match(/[^a-zA-Z0-9]/)) {
+		cityReqs++;
 		}
-		if (city.match(/[A-Z]/)) {
-			$('.cityAvailable').attr('data-state', 'achieved');
+});
+
+  var countryCa;
+  var countryUs;
+
+$('[name="country"]').on('change', function (ev) {
+    if ($(this).val() == 'us') {
+      if (!countryUs) {
+        $('.country-details').load('country-us.html', function (data) {
+          countryUs = data;
+        });
+      } 
+	  else {
+        $('.country-details').html(countryUs);
+      }
+    } 
+	else {
+      if (!countryCa) {
+        $('.country-details').load('country-ca.html', function (data) {
+          countryCa = data;
+        });
+      } else {
+        $('.country-details').html(countryCa);
+      }
+    }
+});
+
+
+
+$('form').on('submit', function (ev) {
+		if (
+			userAvailable.attr('data-status') == 'unchecked'
+			|| userAvailable.attr('data-status') == 'unavailable'
+			|| passwordReq < 5
+			|| cityReqs < 1
+		) {
+			ev.preventDefault();
 		}
 	});
-
+	
+});
