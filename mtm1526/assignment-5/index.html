@@ -20,6 +20,9 @@
 		<div>
 			<label for="email">Email</label>
 			<input id="email" name="email" required>
+			<strong class="email-available" data-status="unchecked"> <!--    The "data-" does exist in html5 and you can add anything after the " - "     -->
+				Available
+			</strong>
 		</div>
 		
 		<div>
@@ -44,13 +47,16 @@
 		</div>
 		
 		<fieldset>
-            <legend>Country</legend>
-            <input type="radio" id="canada" name="canada">
-            <label for="canada">Canada</label>
-                
-            <input type="radio" id="us" name="us">
-            <label for="us">US</label>
-        </fieldset>
+			<legend>Country</legend>
+		
+			<input type="radio" id="country-ca" name="country" value="ca">
+			<label for="country-ca">Canada</label>
+		
+			<input type="radio" id="country-us" name="country" value="us">
+			<label for="country-us">United States</label>
+		</fieldset>
+	
+		<div class="country-details"></div>
 		
 		<button type="submit">Submit</button>
 	</form>
