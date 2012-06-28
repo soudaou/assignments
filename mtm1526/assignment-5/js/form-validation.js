@@ -4,7 +4,7 @@ $(document).ready(function () {
 	var cityAvailable = $('.city-available');
 	var passwordReqs = 0;
 	
-	$('#username').on('change', function (ev) {
+$('#username').on('change', function (ev) {
 		
 		/*console.log('username');*/
 		
@@ -39,7 +39,7 @@ $(document).ready(function () {
 		}
 	});
 	
-	$('#password').on('keyup', function (ev) {
+$('#password').on('keyup', function (ev) {
 		var password = $(this).val();
 		
 		// We want to add the passwordReqs to each if statement
@@ -85,13 +85,47 @@ $(document).ready(function () {
 	
 });
 
-//$('#city').on('change', function (ev) {
-	$('#city').on('keyup', function (ev) {
-		var city = $(this).val();
+
+$('#email').on('change', function (ev) {
+		
 		/*console.log('username');*/
 		
-		var city = $(this).val();
+		var email = $(this).val();
 		
+		// if user tyes 3 or more it will go back to unchecked
+		userAvailable.attr('data-status', 'unchecked');
+		
+		//length constriction
+		if (email. length >=3 && email.length <=25) {	
+		
+			var ajax = $.post('check-email.php', {
+				'email' : email
+			});
+		
+			ajax.done(function (data) {
+				if (data == 'available') {
+					userAvailable
+						.attr('data-status', 'available')
+						.html('Available');
+				}
+				else {
+					userAvailable
+						.attr('data-status', 'unavailable')
+						.html('unavailable');
+				}
+			});
+		}
+		// If the user types less than 3, the unavailable will show up
+		else{
+			userAvailable.attr('data-status', 'unavailable').html('Unavailable');
+		}
+	});
+	
+	
+	
+$('#city').on('keyup', function (ev) {
+		var city = $(this).val();
+		/*console.log('username');*/
 		// if user tyes 3 or more it will go back to unchecked
 		cityAvailable.attr('data-status', 'unchecked');
 		
@@ -103,37 +137,5 @@ $(document).ready(function () {
 		if (city.match(/[A-Z]/)) {
 			$('.cityAvailable').attr('data-state', 'achieved');
 		}
-		//if (city.length >=3 && city.length <=25) {	
-//		
-//			var ajax = $.post('check-username.php', {
-//				'city' : city
-//			});
-		
-			//ajax.done(function (data) {
-//				if (data == 'available') {
-//					cityAvailable
-//						.attr('data-status', 'available')
-//						.html('Available');
-//				}
-//				else {
-//					cityAvailable
-//						.attr('data-status', 'unavailable')
-//						.html('unavailable');
-//				}
-//			});
-		//}
-		// If the user types less than 3, the unavailable will show up
-		//else{
-			//cityAvailable.attr('data-status', 'unavailable').html('Unavailable');
-		//}
 	});
-
-
-
-
-
-
-
-
-
 
