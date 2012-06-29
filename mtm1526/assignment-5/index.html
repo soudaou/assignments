@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	
+	<h1> Form Validation </h1>
 	<form>
 		<div>
 			<label for="username">Username</label>
@@ -20,7 +20,7 @@
 		<div>
 			<label for="email">Email</label>
 			<input id="email" name="email" required>
-			<strong class="email-available" data-status="unchecked">
+			<strong class="email-correct" data-status="unchecked">
 				Available
 			</strong>
 		</div>
@@ -28,7 +28,7 @@
 		<div>
 			<label for="password">Password</label>
 			<input type="password" id="password" name="password" required>
-			<strong>Password Required</strong>
+			<p><strong>Password Requirements:</strong></p>
 			<ul class="pass-reqs">
 				<li class="pass-length"> Atleast 6 characters long </li>
 				<li class="pass-lower"> 1 lowercase letter </li>
@@ -41,24 +41,22 @@
 		<div>
 			<label for="city">City</label>
 			<input id="city" name="city" required>
-			<strong class="city-available" data-status="unchecked">
-				Available
-			</strong>
+			<strong class="wrong-city" data-status="unchecked"></strong>
 		</div>
 		
 		<fieldset>
 			<legend>Country</legend>
 		
 			<input type="radio" id="country-ca" name="country" value="ca">
-			<label for="country-ca">Canada</label>
+			<label for="ca">Canada</label>
 		
 			<input type="radio" id="country-us" name="country" value="us">
-			<label for="country-us">United States</label>
+			<label for="us">United States</label>
 		</fieldset>
 	
 		<div class="country-details"></div>
 		
-		<button type="submit">Submit</button>
+		<button class="submit" type="submit">Submit</button>
 	</form>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
