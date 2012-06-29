@@ -1,5 +1,39 @@
 @charset "utf-8";
 /* CSS Document */
+html{
+	mragin:0;
+	padding-top:2em;
+	padding-left:20em;
+	width:40%;
+	font-family:"Century Gothic";
+	background-color:#6CC;
+}
+body{
+	margin:0;
+	padding: 1em 1em 1em 1em;
+	background-color:#F0F0F0;
+	border-radius:4px 4px 4px 4px;
+}
+h1{
+	text-align:center;
+	text-transform:uppercase;
+	color:#000;
+}
+p{
+	color:#666;
+}
+li{
+	color:#666;
+}
+
+label{
+	color:#000;
+	font-weight:bolder;
+}
+.submit{
+	margin-top:1em;
+}
+
 
 /*User Available*/
 .user-available {
@@ -41,50 +75,37 @@
 
 /*email Available*/
 
-.email-available {
+.email-correct {
 	font-size: 1.123em;
 }
 
-.email-available:before {
+.email-correct:before {
 	content: "✔";
 }
 
-.email-available[data-status="unchecked"] {
+.email-correct[data-status="unchecked"] {
 	display:none;
 }
-.email-available[data-status="available"] {
+.email-correct[data-status="available"] {
 	color:#090;
 }
 
-.email-available[data-status="unavailable"] {
+.email-correct[data-status="unavailable"] {
 	color:#f33;
 }
 
-.email-available[data-status="unavailable"]:before {
+.email-correct[data-status="unavailable"]:before {
 	content: "✖";
 }
 
 
 /*City Available*/
-.city-available {
-	font-size: 1.123em;
-}
 
-.city-available:before {
-	content: "✔";
+wrong-city{
+	display: inline-block;
 }
+.wrong:after{
+content:"✖";
+color:#F00;
 
-.city-available[data-status="unchecked"] {
-	display:none;
-}
-.city-available[data-status="available"] {
-	color:#090;
-}
-
-.city-available[data-status="unavailable"] {
-	color:#f33;
-}
-
-.city-available[data-status="unavailable"]:before {
-	content: "✖";
 }
